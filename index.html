@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b2c">
+  <title>營運募資技巧｜主管摘要</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101b2c;
+      --panel: #18263a;
+      --panel-soft: #1d2d43;
+      --text: #eef3f8;
+      --muted: #a5b3c4;
+      --line: #304158;
+      --mint: #5ce0b5;
+      --blue: #86b8ff;
+      --amber: #f3c477;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans TC", "PingFang TC", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page { width: min(100% - 32px, 1080px); margin: 0 auto; padding: 28px 0 56px; }
+    .topline { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:20px; color:var(--muted); font-size:13px; letter-spacing:.06em; text-transform:uppercase; }
+    .badge { display:inline-flex; align-items:center; gap:7px; padding:6px 10px; border:1px solid #3a526a; border-radius:999px; color:#c3d5e8; letter-spacing:0; }
+    .badge::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--mint); }
+    header { padding: 10px 0 24px; }
+    h1 { margin:0; font-size:clamp(34px, 7vw, 58px); line-height:1.12; letter-spacing:-.035em; }
+    .subtitle { max-width:720px; margin:14px 0 0; color:#b9c6d5; font-size:17px; }
+    .section-label { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin:28px 0 13px; }
+    h2 { margin:0; font-size:21px; letter-spacing:.01em; }
+    .hint { color:var(--muted); font-size:13px; }
+    .metrics { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .metric { min-height:132px; padding:17px; border:1px solid var(--line); border-radius:16px; background:linear-gradient(145deg,var(--panel-soft),var(--panel)); }
+    .metric-name { color:#bdcada; font-size:14px; }
+    .metric-value { margin-top:5px; font-size:clamp(28px,6vw,38px); font-weight:760; line-height:1.2; letter-spacing:-.03em; font-variant-numeric:tabular-nums; }
+    .metric-value small { color:#c0cede; font-size:16px; font-weight:600; letter-spacing:0; }
+    .metric-note { margin-top:7px; color:var(--muted); font-size:13px; }
+    .up { color:var(--mint); }
+    .dashboard-note { margin:12px 2px 0; color:#8293a8; font-size:12px; }
+    .grid { display:grid; gap:14px; }
+    .card { padding:19px; border:1px solid var(--line); border-radius:16px; background:var(--panel); }
+    .card h3 { margin:0; font-size:18px; }
+    .card p { margin:8px 0 0; color:#bdcada; }
+    .card ul { margin:10px 0 0; padding-left:20px; color:#bdcada; }
+    .card li+li { margin-top:5px; }
+    .tag { display:inline-block; margin-bottom:9px; color:var(--mint); font-size:12px; font-weight:750; letter-spacing:.09em; }
+    .funding { border-color:#39516b; background:linear-gradient(145deg,#1c3047,#18263a); }
+    .steps { display:grid; gap:10px; counter-reset:step; }
+    .step { display:grid; grid-template-columns:38px 1fr; gap:12px; padding:14px; border:1px solid var(--line); border-radius:14px; background:var(--panel); counter-increment:step; }
+    .step::before { content:counter(step,decimal-leading-zero); display:grid; width:34px; height:34px; place-items:center; border-radius:10px; background:#243c56; color:var(--blue); font-size:13px; font-weight:800; }
+    .step h3 { margin:0; font-size:16px; }
+    .step p { margin:4px 0 0; color:#bdcada; font-size:14px; }
+    .callout { padding:17px 19px; border-left:3px solid var(--amber); border-radius:4px 13px 13px 4px; background:#292a2a; color:#d8d2c7; }
+    .callout strong { color:#ffe0a6; }
+    footer { margin-top:28px; padding-top:16px; border-top:1px solid var(--line); color:#8797aa; font-size:13px; }
+    @media (min-width:700px) {
+      .page { padding-top:38px; }
+      .metrics { grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+      .metric { padding:20px; }
+      .grid.two { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .steps { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topline"><span>營運策略簡報</span><span class="badge">主管摘要｜示意資料</span></div>
+    <header>
+      <h1>營運募資技巧</h1>
+      <p class="subtitle">用可追蹤的營運指標說明成長品質，再以明確的資金用途與里程碑，建立投資人對執行力的信心。</p>
+    </header>
+
+    <section aria-labelledby="metrics-title">
+      <div class="section-label"><h2 id="metrics-title">營運快照</h2><span class="hint">最近一季｜示意數據</span></div>
+      <div class="metrics">
+        <article class="metric"><div class="metric-name">月營收（MRR）</div><div class="metric-value">NT$ 180<small> 萬</small></div><div class="metric-note"><span class="up">↑ 18%</span> 季增｜示意</div></article>
+        <article class="metric"><div class="metric-name">毛利率</div><div class="metric-value">62<small>%</small></div><div class="metric-note">目標 65%｜示意</div></article>
+        <article class="metric"><div class="metric-name">付費客戶</div><div class="metric-value">1,240</div><div class="metric-note"><span class="up">↑ 12%</span> 季增｜示意</div></article>
+        <article class="metric"><div class="metric-name">現金可支撐月數</div><div class="metric-value">14<small> 個月</small></div><div class="metric-note">以目前月燒錢速度估算｜示意</div></article>
+      </div>
+      <p class="dashboard-note">以上數字純為版面示意，請以公司最新財務與營運資料替換，並統一統計期間及計算口徑。</p>
+    </section>
+
+    <section aria-labelledby="operations-title">
+      <div class="section-label"><h2 id="operations-title">營運管理重點</h2><span class="hint">聚焦可改善、可驗證</span></div>
+      <div class="grid two">
+        <article class="card">
+          <span class="tag">01 / 經營效率</span>
+          <h3>把成長拆成可行動的指標</h3>
+          <ul><li>每週追蹤新客、轉換率、留存與客戶流失原因。</li><li>檢視獲客成本（CAC）與客戶終身價值（LTV）的變化。</li><li>指標落後時，指定負責人、改善期限與回顧日期。</li></ul>
+        </article>
+        <article class="card">
+          <span class="tag">02 / 現金紀律</span>
+          <h3>讓資源投入對應營運結果</h3>
+          <ul><li>按月檢視現金流、固定成本與現金可支撐月數。</li><li>把預算連到具體目標，例如提升毛利或縮短回收期。</li><li>建立基準、樂觀與保守情境，及早看見資金缺口。</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="funding-title">
+      <div class="section-label"><h2 id="funding-title">募資溝通技巧</h2><span class="hint">以證據串起資金需求</span></div>
+      <div class="grid two">
+        <article class="card funding"><span class="tag">募資敘事</span><h3>說清楚「為什麼現在、為什麼需要」</h3><p>用客戶需求與市場訊號說明時機，再以營收、留存或試點成果支持商業模式，最後交代本輪資金要解決的瓶頸。</p></article>
+        <article class="card funding"><span class="tag">資金用途</span><h3>把金額連到里程碑</h3><p>逐項說明資金投入、預計完成時間與衡量方式，例如產品上線、客戶拓展或單位經濟改善；同時呈現預算假設。</p></article>
+      </div>
+      <div class="steps" style="margin-top:12px">
+        <article class="step"><div><h3>整理資料室</h3><p>備妥財務報表、營運儀表板、股權結構及關鍵合約，確保定義一致。</p></div></article>
+        <article class="step"><div><h3>準備常見問答</h3><p>先演練市場規模、競爭差異、客戶流失、燒錢速度與募資規劃。</p></div></article>
+        <article class="step"><div><h3>依投資人調整重點</h3><p>了解投資階段與產業偏好，以對方關注的指標呈現公司進展。</p></div></article>
+        <article class="step"><div><h3>追蹤後續行動</h3><p>會後記錄問題、待補資料與負責人，設定明確回覆時間。</p></div></article>
+      </div>
+    </section>
+
+    <section aria-label="簡報提醒" style="margin-top:18px">
+      <div class="callout"><strong>簡報提醒：</strong>暱稱「阿拓」負責營運數據整理，「小岑」負責募資資料彙整（皆為示意暱稱）。對外分享前請替換所有示意數據，並確認數字可由財務資料追溯。</div>
+    </section>
+    <footer>內部討論草稿｜示意內容，非公司實際營運或募資承諾</footer>
+  </main>
+</body>
+</html>
+
+
